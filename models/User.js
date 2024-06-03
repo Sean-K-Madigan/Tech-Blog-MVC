@@ -8,6 +8,7 @@ class User extends Model {
   }
 }
 
+
 User.init(
   {
     id: {
@@ -37,6 +38,10 @@ User.init(
       allowNull: false,
       validate: {
         len: [8],
+        isComplex(value) {
+          if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(value)) {
+            throw new Error('Password must have at least one uppercase letter, one lowercase letter, one number, and one special character');
+          }
       },
     },
   },
