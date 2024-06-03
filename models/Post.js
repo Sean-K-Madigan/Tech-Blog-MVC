@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Post extends Model {}
 
+
+// Create the post model containing id, title, post_content, and user_id fields
 Post.init(
   {
     id: {

@@ -8,7 +8,7 @@ class User extends Model {
   }
 }
 
-
+// Create the user model containing id, first_name, last_name, email, and password fields
 User.init(
   {
     id: {

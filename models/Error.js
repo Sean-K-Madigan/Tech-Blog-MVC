@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Error extends Model {}
 
+// Create the error model containing id, error_name, error_message, error_stack, user_id, route, method, and user_agent fields
 Error.init(
   {
     id: {

@@ -3,6 +3,8 @@ const Post = require('./Post');
 const Comment = require('./Comment');
 const Error = require('./Error');
 
+// Define the relationships between the models
+
 // A user can have more than one post
 User.hasMany(Post, {
   foreignKey: 'user_id',
