@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cracking the Code</title>
+  <link rel="stylesheet" href="/ClassActivities/Tech-Blog-FS/public/css/style.css">
+</head>
+
+<body>
+  <!-- Add your header, navigation, and main content here -->
+
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        {{#if loggedIn}}
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    <h1>Cracking the Code</h1>
+  </header>
+
+  <main>
+    {{{body}}}
+  </main>
+
+  <footer>
+    <h2 class="purpose">Please enjoy this cyberspace to interct with fellow devs and share problems and ideas.</h2>
+    <p>Made with ❤️ by <a href="https://github.com/Sean-K-Madigan">Sean</a></p>
+  </footer>
+  <script src="/ClassActivities/Tech-Blog-FS/public/js/login.js"></script>
+</body>
+
+</html>
